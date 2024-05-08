@@ -1,0 +1,94 @@
+.list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Adjust as needed */
+    padding: 20px;
+    margin: 30px;
+    border-radius: 8px;
+    background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  .listproduct-format-main {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr)); /* Flexible grid columns */
+    gap: 10px;
+    width: 100%;
+    padding: 20px 0;
+    color: #454545;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .listproduct-format-main p {
+    text-align: center; /* Center align text */
+  }
+  
+  .listproduct-allproducts {
+    width: 100%;
+  }
+  
+  .listproduct-format {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1fr 1fr auto; /* Adjust column widths */
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+  
+  .listproduct-format img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .listproduct-format p {
+    margin: 0;
+  }
+  
+  .listproduct-remove-icon {
+    cursor: pointer;
+    justify-self: center; /* Center the icon horizontally */
+  }
+  
+  .listproduct-remove-icon:hover {
+    filter: brightness(0.8); /* Add slight dim effect on hover */
+  }
+  
+  /* For screens smaller than 768px (tablets) */
+@media (max-width: 767px) {
+    .listproduct-format-main {
+      grid-template-columns: repeat(3, minmax(0, 1fr)); /* Display 3 columns */
+    }
+  }
+  
+  /* For screens smaller than 576px (phones) */
+  @media (max-width: 575px) {
+    .listproduct-format-main {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); /* Display 2 columns */
+    }
+  
+    .listproduct-format {
+      grid-template-columns: 1fr; /* Display 1 column */
+      text-align: center;
+    }
+  
+    .listproduct-format img {
+      justify-self: center; /* Center align product icon */
+    }
+  
+    .listproduct-remove-icon {
+      margin: 0 auto; /* Center align remove icon */
+    }
+  }
+  
+  /* For screens larger than 1200px */
+  @media (min-width: 1200px) {
+    .list-product {
+      max-width: 1200px; /* Limit width for large screens */
+    }
+  }
+  
