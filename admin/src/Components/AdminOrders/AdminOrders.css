@@ -1,0 +1,127 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Admin Orders Container */
+.admin-orders {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-orders h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Orders List */
+.orders-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Order Card */
+.order-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.order-card h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.order-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.order-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-card ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.order-card ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.order-card ul li .product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.order-card ul li .product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-card ul li .product-details span {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Strong Text */
+.order-card strong {
+    color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .order-card {
+        padding: 15px;
+    }
+
+    .order-card h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-orders {
+        padding: 10px;
+    }
+
+    .order-card {
+        padding: 10px;
+    }
+
+    .order-card h2 {
+        font-size: 1.25rem;
+    }
+}
